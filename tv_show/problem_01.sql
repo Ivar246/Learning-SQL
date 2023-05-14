@@ -1,0 +1,59 @@
+-- Challenge 1
+--      inner join of series and reviews table
+
+-- Query
+SELECT * FROM series JOIN reviews ON series.id = reviews.series_id;
+
+--output 
+
+-- +----+----------------------+---------------+-----------+----+--------+-----------+-------------+
+-- | id | title                | released_year | genre     | id | rating | series_id | reviewer_id |
+-- +----+----------------------+---------------+-----------+----+--------+-----------+-------------+
+-- |  1 | Archer               |          2009 | Animation |  1 |    8.0 |         1 |           1 |
+-- |  1 | Archer               |          2009 | Animation |  2 |    7.5 |         1 |           2 |
+-- |  1 | Archer               |          2009 | Animation |  3 |    8.5 |         1 |           3 |
+-- |  1 | Archer               |          2009 | Animation |  4 |    7.7 |         1 |           4 |
+-- |  1 | Archer               |          2009 | Animation |  5 |    8.9 |         1 |           5 |
+-- |  2 | Arrested Development |          2003 | Comedy    |  6 |    8.1 |         2 |           1 |
+-- |  2 | Arrested Development |          2003 | Comedy    |  7 |    6.0 |         2 |           4 |
+-- |  2 | Arrested Development |          2003 | Comedy    |  8 |    8.0 |         2 |           3 |
+-- |  2 | Arrested Development |          2003 | Comedy    |  9 |    8.4 |         2 |           6 |
+-- |  2 | Arrested Development |          2003 | Comedy    | 10 |    9.9 |         2 |           5 |
+-- |  3 | Bob's Burgers        |          2011 | Animation | 11 |    7.0 |         3 |           1 |
+-- |  3 | Bob's Burgers        |          2011 | Animation | 12 |    7.5 |         3 |           6 |
+-- |  3 | Bob's Burgers        |          2011 | Animation | 13 |    8.0 |         3 |           4 |
+-- |  3 | Bob's Burgers        |          2011 | Animation | 14 |    7.1 |         3 |           3 |
+-- |  3 | Bob's Burgers        |          2011 | Animation | 15 |    8.0 |         3 |           5 |
+-- |  4 | Bojack Horseman      |          2014 | Animation | 16 |    7.5 |         4 |           1 |
+-- |  4 | Bojack Horseman      |          2014 | Animation | 17 |    7.8 |         4 |           3 |
+-- |  4 | Bojack Horseman      |          2014 | Animation | 18 |    8.3 |         4 |           4 |
+-- |  4 | Bojack Horseman      |          2014 | Animation | 19 |    7.6 |         4 |           2 |
+-- |  4 | Bojack Horseman      |          2014 | Animation | 20 |    8.5 |         4 |           5 |
+-- |  5 | Breaking Bad         |          2008 | Drama     | 21 |    9.5 |         5 |           1 |
+-- |  5 | Breaking Bad         |          2008 | Drama     | 22 |    9.0 |         5 |           3 |
+-- |  5 | Breaking Bad         |          2008 | Drama     | 23 |    9.1 |         5 |           4 |
+-- |  5 | Breaking Bad         |          2008 | Drama     | 24 |    9.3 |         5 |           2 |
+-- |  5 | Breaking Bad         |          2008 | Drama     | 25 |    9.9 |         5 |           5 |
+-- |  6 | Curb Your Enthusiasm |          2000 | Comedy    | 26 |    6.5 |         6 |           2 |
+-- |  6 | Curb Your Enthusiasm |          2000 | Comedy    | 27 |    7.8 |         6 |           3 |
+-- |  6 | Curb Your Enthusiasm |          2000 | Comedy    | 28 |    8.8 |         6 |           4 |
+-- |  6 | Curb Your Enthusiasm |          2000 | Comedy    | 29 |    8.4 |         6 |           2 |
+-- |  6 | Curb Your Enthusiasm |          2000 | Comedy    | 30 |    9.1 |         6 |           5 |
+-- |  7 | Fargo                |          2014 | Drama     | 31 |    9.1 |         7 |           2 |
+-- |  7 | Fargo                |          2014 | Drama     | 32 |    9.7 |         7 |           5 |
+-- |  8 | Freaks and Geeks     |          1999 | Comedy    | 33 |    8.5 |         8 |           4 |
+-- |  8 | Freaks and Geeks     |          1999 | Comedy    | 34 |    7.8 |         8 |           2 |
+-- |  8 | Freaks and Geeks     |          1999 | Comedy    | 35 |    8.8 |         8 |           6 |
+-- |  8 | Freaks and Geeks     |          1999 | Comedy    | 36 |    9.3 |         8 |           5 |
+-- |  9 | General Hospital     |          1963 | Drama     | 37 |    5.5 |         9 |           2 |
+-- |  9 | General Hospital     |          1963 | Drama     | 38 |    6.8 |         9 |           3 |
+-- |  9 | General Hospital     |          1963 | Drama     | 39 |    5.8 |         9 |           4 |
+-- |  9 | General Hospital     |          1963 | Drama     | 40 |    4.3 |         9 |           6 |
+-- |  9 | General Hospital     |          1963 | Drama     | 41 |    4.5 |         9 |           5 |
+-- | 10 | Halt and Catch Fire  |          2014 | Drama     | 42 |    9.9 |        10 |           5 |
+-- | 13 | Seinfeld             |          1989 | Comedy    | 43 |    8.0 |        13 |           3 |
+-- | 13 | Seinfeld             |          1989 | Comedy    | 44 |    7.2 |        13 |           4 |
+-- | 14 | Stranger Things      |          2016 | Drama     | 45 |    8.5 |        14 |           2 |
+-- | 14 | Stranger Things      |          2016 | Drama     | 46 |    8.9 |        14 |           3 |
+-- | 14 | Stranger Things      |          2016 | Drama     | 47 |    8.9 |        14 |           4 |
+-- +----+----------------------+---------------+-----------+----+--------+-----------+-------------+
