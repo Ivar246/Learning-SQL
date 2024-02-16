@@ -22,6 +22,6 @@ For reference, here is the phones table:
 
 
 Solution->
-    select max(average_price) as max_average_price
-    from (select manufacturer, avg(price) as average_price from phones group by manufacturer) as
+    SELECT max(average_price) AS max_average_price
+    FROM (SELECT manufacturer, AVG(price) AS average_price FROM phones GROUP BY manufacturer) AS
     O;

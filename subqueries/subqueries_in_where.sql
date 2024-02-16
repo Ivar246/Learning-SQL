@@ -20,7 +20,7 @@ For reference, here is the phones table:
 | Wave S8500  | Samsung      | 175   | 9259       |
 +-------------+--------------+-------+------------+
 
-Solution->
-    select name, price from phones where price > (
-    select price from phones where name='S5620 Monte'
+-- Solution->
+    SELECT name, price FROM phones WHERE price > (
+    SELECT price FROM phones WHERE name='S5620 Monte'
     );

@@ -28,5 +28,6 @@ For reference, here is the phones table:
 +-------------+--------------+-------+------------+
 
 Solution-> 
-    select name, price, price/(select max(price) from phones) as price_ratio
-    from phones;
+    SELECT name, price, price/(SELECT max(price) FROM
+     phones) AS price_ratio
+    FROM phones;
