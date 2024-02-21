@@ -1,6 +1,6 @@
 -- problem:  show name, department and price of the most expensive product in each department
 
--- solution2-> correlated query
+-- solution->
     SELECT name, department, price FROM products AS p1
     WHERE price=(SELECT max(price) FROM products AS p2 WHERE p2.department=p1.department);
 
@@ -30,3 +30,11 @@
         Practical Steel Shoes     | Toys        |   947
 
 
+-- without using a join or a group by, print the number of orders for each product 
+
+-- Solution: 
+    SELECT name, (
+        SELECT COUNT(*) FROM orders AS o1 Where p1.id=o1.product_id
+    ) AS order_count FROM products As p1;
+
+-- Output
