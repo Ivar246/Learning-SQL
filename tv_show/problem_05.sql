@@ -12,7 +12,7 @@ SELECT
 FROM reviewers
 INNER JOIN reviews 
 ON reviewers.id = reviews.reviewer_id
-INNER JOIM series
+INNER JOIN series
 ON series.id = reviews.series_id
   order by title;
 
